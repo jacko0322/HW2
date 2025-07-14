@@ -1,0 +1,59 @@
+.pre-line{
+    white-space: pre-line;
+}
+.limit-list{
+    overflow: hidden;
+    max-height: 7.5rem;
+}
+
+.hotjob-outer .jobtitle{
+    overflow:hidden;
+    height:1.625rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-inner-outer-button{
+    -webkit-appearance: none;
+}
+
+.no-spin{
+    -moz-appearance: textfield;
+}
+
+.sweet-buy-all .swal2-html-container{
+    text-align:center;
+    color: #f5703d;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.emphasize{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+    /* font-size:1.1rem; */
+}
+
+.cart-back{
+    border-radius: 100%;
+    background-color: #E8E3FC;
+}
+.cart-back img{
+    padding: 4px;
+}
+
+div.rwd-table{
+    overflow-x: auto;
+}
+
+span.digit-counter{
+    background: linear-gradient(180deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 48%, rgba(55,55,55,1) 100%);
+    color:#fff;
+    padding:2px 5px;
+    width: 20px;
+    height: 40px;
+    border-radius: 2px;
+}
