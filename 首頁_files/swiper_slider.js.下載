@@ -1,0 +1,154 @@
+
+
+// 輪播
+function initSwiperslider(element) {
+	var swiper = new Swiper(`${element}`, {
+		loop: true,
+		autoplay: {
+			delay: 7500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	});
+}
+
+function initSwiperslider2(element) {
+	var swiper = new Swiper(`${element}`, {
+		slidesPerView: getSwiperNum(),
+		spaceBetween: 20,
+		navigation: {
+			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: "progressbar",
+		},
+		on: {
+			resize: function () {
+				this.params.slidesPerView = getSwiperNum();
+				this.update();
+			},
+		},
+	});
+}
+
+function getSwiperNum() {
+	width = $(window).width();
+
+	if (width > 768) return 3;
+	if (width > 576 && width <= 768) return 2;
+	if (width <= 576) return 1;
+	return 3;
+}
+
+function initSwipergallery() {
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+}
+
+function initSwiperslider3(element) {
+	var swiper = new Swiper(`${element}`, {
+		slidesPerView: getSwiperNum2(),
+		spaceBetween: getSwiperSpace2(),
+		navigation: {
+			prevEl: '.swiper-button-prev2',
+			nextEl: '.swiper-button-next2',
+		},
+		on: {
+			resize: function () {
+				this.params.slidesPerView = getSwiperNum2();
+				this.params.spaceBetween = getSwiperSpace2();
+				this.update();
+			},
+		},
+	});
+}
+
+function getSwiperNum2() {
+	width = $(window).width();
+
+	if (width > 769) return 3;
+	if (width > 576 && width <= 768) return 2;
+	if (width <= 576) return 1;
+	return 3;
+}
+
+function getSwiperSpace2() {
+	width = $(window).width();
+
+	if (width > 1280) return 60;
+	if (width <= 1280) return 42;
+	return 60;
+}
+
+$(function () {
+	initSwiperslider('.ui-slider');
+	initSwiperslider2('.ui-experience');
+	initSwiperslider3('.ui-issue-2');
+	let picsimg = $('[data-src]');
+	lazyload(picsimg);
+	AOS.init();
+
+	var countCX = function () {
+		$('.numCount').each(function (i, dom) {
+			var isplay = true;
+			var sT;
+			var ncTop;
+			var funcCX = function () {
+				sT = $(window).scrollTop();
+				ncTop = $(dom).offset().top;
+				var id, decimals, startVal, endVal, duration;
+				if (sT > ncTop - $(window).height() && sT < ncTop && isplay) {
+					$(dom).find('.numCX').each(function () {
+						id = $(this).attr('id');
+						decimals = $(this).attr('data-decimals'),
+							startVal = $(this).attr('data-startVal'),
+							endVal = $(this).attr('data-endVal'),
+							duration = $(this).attr('data-speed');
+						new CountUp(id, startVal, endVal, decimals, duration, {
+							useEasing: true,//效果
+							separator: ''//数字分隔符
+						}).start();// target：目标元素id, startVal：你想要开始的值, endVal：你想要到达的值, decimals：小数位数，默认值为0, duration：动画持续时间为秒，默认值为2, options：选项的可选对象
+						isplay = false;
+					})
+				}
+			}
+			funcCX();
+			setTimeout(function () { funcCX(); }, 1000);
+			$(window).on("scroll", function () {
+				funcCX();
+			})
+		});
+	}
+	countCX();
+	let pics = $('a[data-src]');
+	$.each(pics, function (k, v) {
+		let url = $(v).attr('data-src');
+		if (k > 3) {
+			setTimeout(function () {
+				$(v).css('backgroundImage', "url('" + url + "')")
+			}, k * 500);
+		}else{
+			$(v).css('backgroundImage', "url('" + url + "')")
+		}
+
+	})
+});
