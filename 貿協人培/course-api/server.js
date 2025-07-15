@@ -1,16 +1,15 @@
 const express = require('express');
 const eventsData = require('./eventsData');  // 使用 require 引入資料
 
-const app = express();
-const port = 3002; // 設定為 3002（你可以選擇其他端口）
+const router = express.Router();  // 使用 express.Router() 設置路由
 
 // 端點：返回所有會展資料
-app.get('/api/events', (req, res) => {
+router.get('/api/events', (req, res) => {
   res.json(eventsData); // 返回所有會展資料
 });
 
 // 端點：根據會展 ID 返回資料
-app.get('/api/events/:id', (req, res) => {
+router.get('/api/events/:id', (req, res) => {
   const eventId = parseInt(req.params.id);
   const event = eventsData.events.find(e => e.id === eventId);
 
@@ -21,7 +20,4 @@ app.get('/api/events/:id', (req, res) => {
   }
 });
 
-// 啟動伺服器
-app.listen(port, () => {
-  console.log(`API 伺服器正在運行於 http://localhost:${port}`);
-});
+module.exports = router;  // 匯出路由
