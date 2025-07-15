@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<!-- saved from url=(0110)https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93 -->
-<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh-TW">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>會展人才培育與認證</title>
     <meta name="description" content="培育我國會展產業從業人員之專業技能，建立會展產業認證制度及人才資料庫，逐步提昇人才素質，促使台灣會展人才資源適才適用。">
     <meta name="keywords" content="會展">
     <meta name="csrf-token" content="RHYGmrIgx5pkBz16SYUQXgaq6sjZ7sfyfHmOr4wk">
     <link href="https://mice2.tako.life/meettaiwan/training/mice/img/logo.png" rel="shortcut icon" type="image/png">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="./國內認證培訓_files/bootstrap.min.css">
     <link rel="stylesheet" href="./國內認證培訓_files/swiper-bundle.min.css">
@@ -15,16 +16,82 @@
     <link rel="stylesheet" href="./國內認證培訓_files/layout.css">
     <link rel="stylesheet" href="./國內認證培訓_files/lightbox.css">
     <link rel="stylesheet" href="./國內認證培訓_files/functional.css">
+    <link rel="stylesheet" href="./國內認證培訓_files/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link href="./國內認證培訓_files/bootstrap-4.css" rel="stylesheet">
+
+    <!-- 動態載入樣式 -->
+    <style>
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            flex-direction: column;
+        }
+        
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-container {
+            text-align: center;
+            padding: 20px;
+            color: #dc3545;
+        }
+        
+        .retry-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .retry-btn:hover {
+            background: #0056b3;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            min-height: 400px;
+        }
+        
+        .teacher-card.card {
+            min-height: 300px;
+        }
+    </style>
 
     <!-- JS -->
-    <script async="" src="./國內認證培訓_files/gtm.js.下載"></script><script src="./國內認證培訓_files/jquery.min.js.下載"></script>
+    <script src="./國內認證培訓_files/jquery.min.js.下載"></script>
     <script src="./國內認證培訓_files/bootstrap.bundle.min.js.下載"></script>
     <script src="./國內認證培訓_files/swiper-bundle.min.js.下載"></script>
     <script src="./國內認證培訓_files/aos.js.下載"></script>
     <script src="./國內認證培訓_files/into.js.下載"></script>
-    <link rel="stylesheet" href="./國內認證培訓_files/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <script src="./國內認證培訓_files/jquery.cookie.min.js.下載"></script>
     <script src="./國內認證培訓_files/lazyload.js.下載"></script>
+    <script src="./國內認證培訓_files/sweetalert2.min.js.下載"></script>
+    
     <script>
         $.ajaxSetup({
             headers: {
@@ -33,175 +100,141 @@
         });
         let myPlugin = {};
     </script>
-    <!-- Google tag (gtag.js) -->
+    
+    <!-- Google Analytics -->
     <script async="" src="./國內認證培訓_files/js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
         gtag('config', 'G-4SLCWHF0HP', { cookie_flags: 'SameSite=None;Secure',cookie_expires: 0 });
     </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-W9GK2WL');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <link href="./國內認證培訓_files/bootstrap-4.css" rel="stylesheet">
-    <script src="./國內認證培訓_files/sweetalert2.min.js.下載"></script>
 </head>
 
 <body>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9GK2WL" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- HEADER -->
-    <!-- 表頭 -->
-<header class="c-header">
-    <div class="header-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-logo">
-                    <div class="logo"><a href="https://jacko0322.github.io/HW2/首頁.html"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/logo_2023_07_03.png" src="./首頁_files/logo_2023_07_03.png"></a></div>
-                </div>
-                <div class="col-menu collapse navbar-collapse" id="collapsibleNavbar">
-                    <div class="menu-outer">
-                        <ul class="nav">
-                            <li class="nav-item"><a href="https://jacko0322.github.io/HW2/首頁.html" class="nav-link active">首頁</a></li>
-                            <li class="nav-item dropdown ">
-                                <a href="javascript:void(0);" class="nav-link dropdown-toggle " data-hover="dropdown">關於MICE</a>
-                                <div class="dropdown-menu">
-                                    <a href="https://jacko0322.github.io/HW2/計畫介紹.html" class="dropdown-item ">計畫介紹</a>
-                                    <a href="https://jacko0322.github.io/HW2/職能基準.html" class="dropdown-item">職能基準</a>
-                                    
-                                </div>
-                            </li>
-                            <li class="nav-item"><a href="https://jacko0322.github.io/HW2/最新消息.html" class="nav-link">最新消息</a></li>
-                            <li class="nav-item dropdown">
-                                <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-hover="dropdown">課程與認證</a>
-                                <div class="dropdown-menu">
-                                    <a href="https://jacko0322.github.io/HW2/會展沙龍.html" class="dropdown-item">會展沙龍</a>
-                                    <span class="dropdown-item dropdown-submenu">
-                                        <a href="javascript:void(0);">國際認證</a>
-                                        <ul class="dropdown-menu">
-                                            <a href="https://jacko0322.github.io/HW2/國際認證培訓及考試.html" class="dropdown-item">國際認證培訓及考試</a>
-                                            <a href="https://jacko0322.github.io/HW2/國際認證介紹.html" class="dropdown-item">國際認證介紹</a>
-                                            
-                                        </ul>
-                                    </span>
-                                    <span class="dropdown-item dropdown-submenu">
-                                        <a href="javascript:void(0);">國內認證</a>
-                                        <ul class="dropdown-menu">
-                                            <a href="https://jacko0322.github.io/HW2/國內認證培訓.html" class="dropdown-item">國內認證培訓</a>
-                                            <a href="https://jacko0322.github.io/HW2/國內認證考試.html" class="dropdown-item">國內認證考試</a>
-                                            <a href="https://jacko0322.github.io/HW2/國內認證叢書.html" class="dropdown-item">國內認證叢書</a>
-                                        </ul>
-                                    </span>
-                                    
-                                    <a href="https://jacko0322.github.io/HW2/常見問題.html" class="dropdown-item">常見問題</a>
-                                    <a href="https://jacko0322.github.io/HW2/文件下載.html" class="dropdown-item">文件下載</a>
-                                    
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-hover="dropdown">活動花絮</a>
-                                <div class="dropdown-menu">
-                                    <a href="https://jacko0322.github.io/HW2/影音.html" class="dropdown-item">影音</a>
-                                    <a href="https://jacko0322.github.io/HW2/照片.html" class="dropdown-item">照片</a>
-                                    <a href="https://jacko0322.github.io/HW2/會展視覺專區.html" id="vrswitch" class="dropdown-item" style="">VR/AR會展視覺專區</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <form class="search-outer" action="https://mice2.tako.life/meettaiwan/training/mice/search">
-                                    <input type="text" name="kw" class="form-control">
-                                    <button type="submit" class="btn btn-search"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_search.svg" src="./國內認證培訓_files/icon_search.svg"></button>
-                                </form>
-                            </li>
-                            <li class="nav-item nav-shoppingcart">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/shoppingCart" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_shoppingcart.svg" src="./國內認證培訓_files/icon_shoppingcart.svg"><span></span></a>
-                            </li>
-
-                                                        <li class="nav-item nav-login">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/login" class="nav-link">登入</a>
-                            </li>
-                            
-                            <li class="nav-item nav-elearning">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/home/index" class="nav-link"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_elearning.png" src="./國內認證培訓_files/icon_elearning.png"></i>E化學院</a>
-                            </li>
-                            <li class="nav-item nav-job">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E6%9C%83%E5%B1%95%E6%B2%99%E9%BE%8D" class="nav-link"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_job.png" src="./國內認證培訓_files/icon_job.png"></i>會展沙龍</a>
-                            </li>
-                            
-                        </ul>
+    <header class="c-header">
+        <div class="header-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-logo">
+                        <div class="logo"><a href="https://jacko0322.github.io/HW2/首頁.html"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/logo_2023_07_03.png" src="./首頁_files/logo_2023_07_03.png"></a></div>
                     </div>
-                </div>
-                <div class="col-btnmenu">
-                    <a href="https://mice2.tako.life/meettaiwan/training/mice/shoppingCart" class="navbar-toggler navbar-shoppingcart">
-                        <img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_shoppingcart.svg" src="./國內認證培訓_files/icon_shoppingcart.svg">
-                    </a>
-                    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_menu.png" src="./國內認證培訓_files/icon_menu.png">
-                    </button>
+                    <div class="col-menu collapse navbar-collapse" id="collapsibleNavbar">
+                        <div class="menu-outer">
+                            <ul class="nav">
+                                <li class="nav-item"><a href="https://jacko0322.github.io/HW2/首頁.html" class="nav-link active">首頁</a></li>
+                                <li class="nav-item dropdown ">
+                                    <a href="javascript:void(0);" class="nav-link dropdown-toggle " data-hover="dropdown">關於MICE</a>
+                                    <div class="dropdown-menu">
+                                        <a href="https://jacko0322.github.io/HW2/計畫介紹.html" class="dropdown-item ">計畫介紹</a>
+                                        <a href="https://jacko0322.github.io/HW2/職能基準.html" class="dropdown-item">職能基準</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="https://jacko0322.github.io/HW2/最新消息.html" class="nav-link">最新消息</a></li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-hover="dropdown">課程與認證</a>
+                                    <div class="dropdown-menu">
+                                        <a href="https://jacko0322.github.io/HW2/會展沙龍.html" class="dropdown-item">會展沙龍</a>
+                                        <span class="dropdown-item dropdown-submenu">
+                                            <a href="javascript:void(0);">國際認證</a>
+                                            <ul class="dropdown-menu">
+                                                <a href="https://jacko0322.github.io/HW2/國際認證培訓及考試.html" class="dropdown-item">國際認證培訓及考試</a>
+                                                <a href="https://jacko0322.github.io/HW2/國際認證介紹.html" class="dropdown-item">國際認證介紹</a>
+                                            </ul>
+                                        </span>
+                                        <span class="dropdown-item dropdown-submenu">
+                                            <a href="javascript:void(0);">國內認證</a>
+                                            <ul class="dropdown-menu">
+                                                <a href="https://jacko0322.github.io/HW2/國內認證培訓.html" class="dropdown-item">國內認證培訓</a>
+                                                <a href="https://jacko0322.github.io/HW2/國內認證考試.html" class="dropdown-item">國內認證考試</a>
+                                                <a href="https://jacko0322.github.io/HW2/國內認證叢書.html" class="dropdown-item">國內認證叢書</a>
+                                            </ul>
+                                        </span>
+                                        <a href="https://jacko0322.github.io/HW2/常見問題.html" class="dropdown-item">常見問題</a>
+                                        <a href="https://jacko0322.github.io/HW2/文件下載.html" class="dropdown-item">文件下載</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-hover="dropdown">活動花絮</a>
+                                    <div class="dropdown-menu">
+                                        <a href="https://jacko0322.github.io/HW2/影音.html" class="dropdown-item">影音</a>
+                                        <a href="https://jacko0322.github.io/HW2/照片.html" class="dropdown-item">照片</a>
+                                        <a href="https://jacko0322.github.io/HW2/會展視覺專區.html" id="vrswitch" class="dropdown-item" style="">VR/AR會展視覺專區</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="search-outer" onsubmit="searchCourses(event)">
+                                        <input type="text" name="kw" id="searchKeyword" class="form-control" placeholder="搜尋課程...">
+                                        <button type="submit" class="btn btn-search"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_search.svg" src="./國內認證培訓_files/icon_search.svg"></button>
+                                    </form>
+                                </li>
+                                <li class="nav-item nav-shoppingcart">
+                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/shoppingCart" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_shoppingcart.svg" src="./國內認證培訓_files/icon_shoppingcart.svg"><span></span></a>
+                                </li>
+                                <li class="nav-item nav-login">
+                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/login" class="nav-link">登入</a>
+                                </li>
+                                <li class="nav-item nav-elearning">
+                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/home/index" class="nav-link"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_elearning.png" src="./國內認證培訓_files/icon_elearning.png"></i>E化學院</a>
+                                </li>
+                                <li class="nav-item nav-job">
+                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E6%9C%83%E5%B1%95%E6%B2%99%E9%BE%8D" class="nav-link"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_job.png" src="./國內認證培訓_files/icon_job.png"></i>會展沙龍</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-btnmenu">
+                        <a href="https://mice2.tako.life/meettaiwan/training/mice/shoppingCart" class="navbar-toggler navbar-shoppingcart">
+                            <img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_shoppingcart.svg" src="./國內認證培訓_files/icon_shoppingcart.svg">
+                        </a>
+                        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_menu.png" src="./國內認證培訓_files/icon_menu.png">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        $(() => {
-            $('#collapsibleNavbar').find('li').eq(3).find('a').eq(0).addClass('active');
-
-            //header的購物車上的數量
-            if(!$.cookie("cart")) $.cookie("cart", JSON.stringify([]), {  path: '/' ,
-                secure: true})
-            var cart =JSON.parse($.cookie("cart"));
-            if(cart && cart.length>0){
-                $('#collapsibleNavbar').find('li').eq(6).find('a').eq(0).find('span').eq(0).html(cart.length);
-            }
-        });
-    </script>
-</header>
-
-    <!-- HEADER 結束-->
+        <script>
+            $(() => {
+                $('#collapsibleNavbar').find('li').eq(3).find('a').eq(0).addClass('active');
+                
+                //header的購物車上的數量
+                if(!$.cookie("cart")) $.cookie("cart", JSON.stringify([]), {  path: '/' , secure: true})
+                var cart =JSON.parse($.cookie("cart"));
+                if(cart && cart.length>0){
+                    $('#collapsibleNavbar').find('li').eq(6).find('a').eq(0).find('span').eq(0).html(cart.length);
+                }
+            });
+        </script>
+    </header>
 
     <!-- MAIN -->
-        <!-- 內容 -->
-        <section class="c-main" style="padding-top: 37.6px;">
+    <section class="c-main" style="padding-top: 37.6px;">
         <div class="pageheader-block" data-src="https://picbackup.github.io/mice/bg_list.jpg" style="background-image: url(&quot;https://picbackup.github.io/mice/bg_list.jpg&quot;);">
             <div class="container" data-src="https://picbackup.github.io/mice/banner_course_3.png" style="background-image: url(&quot;https://picbackup.github.io/mice/banner_course_3.png&quot;);">
                 <div class="row">
                     <div class="col-image">
-                                                <div class="icon"><img data-src="https://picbackup.github.io/mice/image_course6.png" src="./國內認證培訓_files/image_course6.png"></div>
-                                            </div>
+                        <div class="icon"><img data-src="https://picbackup.github.io/mice/image_course6.png" src="./國內認證培訓_files/image_course6.png"></div>
+                    </div>
                     <div class="col-list">
-                                                <div class="title">國內認證培訓</div>
-                                            </div>
+                        <div class="title">國內認證培訓</div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-list">
-                                                <div class="english">Course</div>
-                                            </div>
+                        <div class="english">Course</div>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <div class="pagebody-block">
             <div class="container">
                 <div class="breadcrumb-outer">
@@ -212,162 +245,95 @@
                         <li class="breadcrumb-item active">國內認證培訓</li>
                     </ul>
                 </div>
+                
+                <!-- 搜索結果區域 -->
+                <div id="searchResults" style="display: none;" class="mb-4">
+                    <div class="alert alert-info">
+                        <h5>🔍 搜索結果</h5>
+                        <div id="searchResultsContent"></div>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="clearSearch()">清除搜索</button>
+                    </div>
+                </div>
+                
                 <div class="pagesearch-outer">
-                    <form class="form-inline" action="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93/">
+                    <form class="form-inline" onsubmit="searchCourses(event)">
                         <div class="form-group">
                             <label>關鍵字</label>
                             <div class="form-inline">
-                                <input type="text" name="kw" value="" class="form-control form-control-2">
+                                <input type="text" name="kw" id="searchKeyword2" value="" class="form-control form-control-2" placeholder="搜尋課程或師資...">
                                 <button type="submit" class="btn btn-search">搜尋</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                
                 <div class="pagetab-outer">
                     <ul class="nav nav-pills">
-                                                    <ul class="nav nav-pills">
-                                <li class="nav-item">
-                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#content1" class="nav-link active" data-toggle="pill">國內認證培訓</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#content2" class="nav-link" data-toggle="pill">師資</a>
-                                </li>
-                            </ul>
-                                            </ul>
+                        <li class="nav-item">
+                            <a href="#content1" class="nav-link active" data-toggle="pill" onclick="showCourses()">國內認證培訓</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#content2" class="nav-link" data-toggle="pill" onclick="showTeachers()">師資</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="tab-content">
-
-                    <div id="content1" class="tab-pane active">
-                                                    <div class="card-outer course-outer">
-                                <div class="row">
-                                                                            <div class="col-4">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <a href="https://mice2.tako.life/meettaiwan/training/mice/course-content/2">
-                                                                                                                    <div class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/2022年度國內認證班.jpg" style="background-image: url(&quot;https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/2022年度國內認證班.jpg&quot;);">
-                                                            </div>
-                                                                                                                                                                            <div class="card-state no-state">報名截止</div>
-                                                                                                                </a>
-                                                </div>
-                                                <div class="card-body">
-                                                    <div class="card-title"><a href="https://mice2.tako.life/meettaiwan/training/mice/course-content/2">2022年度國內會展認證-線上課程第3班</a>
-                                                    </div>
-                                                    <div class="card-text">&nbsp;為有志從事會議、展覽、獎勵旅遊等行業人員，特開辦國內會展認證班及衝刺班課程。邀請國內會展專家及業者擔任講師，提供最新會展趨勢及專業知識。虛實整合的Hybrid Meeting及OMO等資訊，深入淺出的課程內容與經驗分享，讓學員深刻瞭解會展產業之範疇與特性，協助學員順利通過「會議展覽專業人員認證考試」，可更新國內會展認證證書時數30小時。日期111年8月6日
-                                                    </div>
-                                                    <div class="card-tag">
-                                                                                                                                                                                                                                                                                                        <span>初階課程</span>
-                                                                                                                                                                                                                                                <span>認證課桯</span>
-                                                                                                                                                                                                                                                <span>國內認證</span>
-                                                                                                                                                                        </div>
-                                                    <div class="card-location">上課地點：線上</div>
-                                                    <div class="card-location" data-bird="1" data-end="2023-12-05">費用：<span>3300</span></div>
-                                                    <div class="card-flex">
-                                                        
-                                                                                                            </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                                                    </div>
-                            </div>
-                                            </div>
-                                            <div id="content2" class="tab-pane">
-                            <div id="content2" class="tab-pane">
-                                <div class="card-outer teacher-outer">
-                                    <div class="row">
-                                                                                    <div class="col-6">
-                                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course-teacher/52" class="card">
-                                                    <div class="card-header">
-                                                                                                                    <img class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/teacher/倪家珍.jpg">
-                                                                                                            </div>
-                                                    <div class="card-body">
-                                                        <div class="card-name">倪家珍</div>
-                                                        <div class="card-item">
-                                                            <div class="card-subtext">
-                                                                致理科技大學教授
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                                                                    <div class="col-6">
-                                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course-teacher/53" class="card">
-                                                    <div class="card-header">
-                                                                                                                    <img class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/teacher/陳淑莉.jpg">
-                                                                                                            </div>
-                                                    <div class="card-body">
-                                                        <div class="card-name">陳淑莉</div>
-                                                        <div class="card-item">
-                                                            <div class="card-subtext">
-                                                                中華大學教授
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                                                                    <div class="col-6">
-                                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course-teacher/54" class="card">
-                                                    <div class="card-header">
-                                                                                                                    <img class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/teacher/黃振家.jpg">
-                                                                                                            </div>
-                                                    <div class="card-body">
-                                                        <div class="card-name">黃振家</div>
-                                                        <div class="card-item">
-                                                            <div class="card-subtext">
-                                                                醒吾科技大學教授,
-財團法人台北市會展產業發展基金會 董事
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                                                                    <div class="col-6">
-                                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course-teacher/55" class="card">
-                                                    <div class="card-header">
-                                                                                                                    <img class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/teacher/張瑛.jpg">
-                                                                                                            </div>
-                                                    <div class="card-body">
-                                                        <div class="card-name">張瑛</div>
-                                                        <div class="card-item">
-                                                            <div class="card-subtext">
-                                                                經濟部會展人才培訓計劃 專任講師,德明科技大學行銷系會展組 助理教授
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                                                                    <div class="col-6">
-                                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course-teacher/56" class="card">
-                                                    <div class="card-header">
-                                                                                                                    <img class="card-img" data-src="https://mice2.tako.life/meettaiwan/training/mice/teacher/賴元化.jpg">
-                                                                                                            </div>
-                                                    <div class="card-body">
-                                                        <div class="card-name">賴元化</div>
-                                                        <div class="card-item">
-                                                            <div class="card-subtext">
-                                                                經濟部會展人才培訓計劃 專任講師
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                                                            </div>
-                                </div>
-                            </div>
-
-                        </div>
-                                    </div>
                 
+                <div class="tab-content">
+                    <!-- 課程列表 -->
+                    <div id="content1" class="tab-pane active">
+                        <!-- 載入狀態 -->
+                        <div id="coursesLoading" class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>正在載入國內課程數據...</p>
+                        </div>
+                        
+                        <!-- 錯誤狀態 -->
+                        <div id="coursesError" class="error-container" style="display: none;">
+                            <h5>❌ 載入失敗</h5>
+                            <p>無法載入課程數據，請檢查網路連接或API服務器狀態</p>
+                            <button class="retry-btn" onclick="loadCourses()">重試</button>
+                        </div>
+                        
+                        <!-- 課程內容 -->
+                        <div id="coursesContent" class="card-outer course-outer" style="display: none;">
+                            <div class="row" id="coursesContainer">
+                                <!-- 動態載入的課程卡片會放在這裡 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 師資列表 -->
+                    <div id="content2" class="tab-pane">
+                        <!-- 載入狀態 -->
+                        <div id="teachersLoading" class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>正在載入國內師資數據...</p>
+                        </div>
+                        
+                        <!-- 錯誤狀態 -->
+                        <div id="teachersError" class="error-container" style="display: none;">
+                            <h5>❌ 載入失敗</h5>
+                            <p>無法載入師資數據，請檢查網路連接或API服務器狀態</p>
+                            <button class="retry-btn" onclick="loadTeachers()">重試</button>
+                        </div>
+                        
+                        <!-- 師資內容 -->
+                        <div id="teachersContent" class="card-outer teacher-outer" style="display: none;">
+                            <div class="row" id="teachersContainer">
+                                <!-- 動態載入的師資卡片會放在這裡 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <input type="hidden" value="國內認證培訓" id="mycourseType">
     <input type="hidden" id="today" value="2025-07-15 23:59:59">
-    <script src="./國內認證培訓_files/course.js.下載"></script>
-    <!-- MAIN 結束 -->
 
-    <!-- FOOTER -->
-    <!-- 表尾 -->
-<footer class="c-footer" style="padding-bottom: 0px;">
+    <!-- 保持原有的Footer -->
+    <footer class="c-footer" style="padding-bottom: 0px;">
     <div class="fatfooter-block">
         <div class="container-fluid">
             <div class="row">
@@ -375,7 +341,7 @@
                     <div class="fatfooter-outer">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">關於MICE</a>
+                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">關於MICE</a>
                                 <div class="content-menu">
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/introduction" class="content-item">計畫介紹</a>
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/benchmark" class="content-item">職能基準</a>
@@ -390,7 +356,7 @@
                     <div class="fatfooter-outer">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">課程與認證</a>
+                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">課程與認證</a>
                                 <div class="content-menu">
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E6%9C%83%E5%B1%95%E6%B2%99%E9%BE%8D" class="content-item">會展沙龍</a>
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93" class="content-item">國際認證培訓</a>
@@ -407,7 +373,7 @@
                     <div class="fatfooter-outer">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">活動花絮</a>
+                                <a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link">活動花絮</a>
                                 <div class="content-menu">
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/activity/video" class="content-item">影音</a>
                                     <a href="https://mice2.tako.life/meettaiwan/training/mice/activity/photo" class="content-item">照片</a>
@@ -429,7 +395,7 @@
                                         信箱：<a href="mailto:irenechen@taitra.org.tw">irenechen@taitra.org.tw</a>
                                         
                                         <br>
-                                        <span id="digtiplace">訪客人數：<span class="digit-counter">3</span><span class="digit-counter">3</span><span class="digit-counter">0</span><span class="digit-counter">9</span><span class="digit-counter">2</span><span class="digit-counter">9</span><span class="digit-counter">0</span></span>
+                                        <span id="digtiplace">訪客人數：<span class="digit-counter">3</span><span class="digit-counter">3</span><span class="digit-counter">0</span><span class="digit-counter">9</span><span class="digit-counter">3</span><span class="digit-counter">3</span><span class="digit-counter">4</span></span>
                                     </div>
                                 </div>
                             </li>
@@ -438,10 +404,10 @@
                     <div class="community-outer">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="https://www.facebook.com/miceiti/" class="nav-link" target="_blank"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_facebook.png" src="./國內認證培訓_files/icon_facebook.png"></i></a>
+                                <a href="https://www.facebook.com/miceiti/" class="nav-link" target="_blank"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_facebook.png"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://www.youtube.com/channel/UCDlAeVi8iwdXoI5Hf6KULyw" class="nav-link" target="_blank"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_youtube.png" src="./國內認證培訓_files/icon_youtube.png"></i></a>
+                                <a href="https://www.youtube.com/channel/UCDlAeVi8iwdXoI5Hf6KULyw" class="nav-link" target="_blank"><i class="icon"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_youtube.png"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -453,7 +419,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-logo">
-                    <div class="logo"><a href="https://mice2.tako.life/meettaiwan/training/mice"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/logo_2023_07_03.png" src="./國內認證培訓_files/logo_2023_07_03.png"></a></div>
+                    <div class="logo"><a href="https://mice2.tako.life/meettaiwan/training/mice"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/logo_2023_07_03.png"></a></div>
                 </div>
                 <div class="col-copyright">
                     <div class="copyright">Copyright © 2023 經濟部國際貿易署 版權所有</div>
@@ -467,10 +433,10 @@
     <div class="rightlink-block">
         <div class="rightmenu-outer">
             <ul class="nav flex-column">
-                                                    <li class="nav-item"><a href="https://mice2.tako.life/register" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_register.png" src="./國內認證培訓_files/icon_register.png"></a></li>
-                                <li class="nav-item"><a href="https://www.facebook.com/miceiti/" class="nav-link" target="_blank"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_facebook.png" src="./國內認證培訓_files/icon_facebook.png"></a></li>
-                <li class="nav-item"><a href="https://www.youtube.com/channel/UCDlAeVi8iwdXoI5Hf6KULyw" class="nav-link" target="_blank"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_youtube.png" src="./國內認證培訓_files/icon_youtube.png"></a></li>
-                <li class="nav-item"><a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E5%85%A7%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_top.png" src="./國內認證培訓_files/icon_top.png"></a>
+                                                    <li class="nav-item"><a href="https://mice2.tako.life/register" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_register.png" src="./國際認證培訓及考試_files/icon_register.png"></a></li>
+                                <li class="nav-item"><a href="https://www.facebook.com/miceiti/" class="nav-link" target="_blank"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_facebook.png" src="./國際認證培訓及考試_files/icon_facebook.png"></a></li>
+                <li class="nav-item"><a href="https://www.youtube.com/channel/UCDlAeVi8iwdXoI5Hf6KULyw" class="nav-link" target="_blank"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_youtube.png" src="./國際認證培訓及考試_files/icon_youtube.png"></a></li>
+                <li class="nav-item"><a href="https://mice2.tako.life/meettaiwan/training/mice/course/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89%E5%9F%B9%E8%A8%93#" class="nav-link"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/icon_top.png" src="./國際認證培訓及考試_files/icon_top.png"></a>
                 </li>
             </ul>
         </div>
@@ -583,12 +549,401 @@
         </div>
     </div>
 </div>
-    <!-- FOOTER 結束  -->
 
+    <!-- JavaScript for API integration -->
     <script>
-        $(function() {
+        // API 配置
+        const API_BASE_URL = 'http://localhost:3000/api';
+        
+        // 全局變量
+        let coursesData = null;
+        let teachersData = null;
+        let currentTab = 'courses';
+
+        // 頁面載入完成後執行
+        $(document).ready(function() {
+            console.log('🚀 頁面載入完成，開始載入國內API數據');
+            loadCourses();
+            
+            // 懶加載圖片
             let pics = $('[data-src]');
-            lazyload(pics);
+            if (typeof lazyload === 'function') {
+                lazyload(pics);
+            }
+        });
+
+        /**
+         * 載入國內課程數據
+         */
+        async function loadCourses() {
+            console.log('📚 開始載入國內課程數據');
+            
+            // 顯示載入狀態
+            $('#coursesLoading').show();
+            $('#coursesError').hide();
+            $('#coursesContent').hide();
+
+            try {
+                console.log('🔗 正在請求:', `${API_BASE_URL}/domestic_courses`);
+                const response = await fetch(`${API_BASE_URL}/domestic_courses`);
+                
+                console.log('📡 HTTP狀態:', response.status, response.statusText);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP錯誤: ${response.status} ${response.statusText}`);
+                }
+                
+                const result = await response.json();
+                console.log('📄 API完整響應:', result);
+                
+                // 更靈活的數據結構檢查
+                let coursesArray = null;
+                
+                if (result.success && result.data && result.data.courses) {
+                    // 標準格式：{success: true, data: {courses: [...]}}
+                    coursesArray = result.data.courses;
+                    console.log('✅ 使用標準格式');
+                } else if (result.courses) {
+                    // 直接格式：{courses: [...]}
+                    coursesArray = result.courses;
+                    console.log('✅ 使用直接格式');
+                } else if (Array.isArray(result)) {
+                    // 陣列格式：[{course1}, {course2}, ...]
+                    coursesArray = result;
+                    console.log('✅ 使用陣列格式');
+                } else if (result.data && Array.isArray(result.data)) {
+                    // 包裝陣列格式：{data: [{course1}, {course2}]}
+                    coursesArray = result.data;
+                    console.log('✅ 使用包裝陣列格式');
+                } else {
+                    console.error('❌ 無法識別的數據格式:', result);
+                    throw new Error(`API返回數據格式錯誤。預期包含courses陣列，實際收到: ${JSON.stringify(result).substring(0, 200)}...`);
+                }
+
+                if (!Array.isArray(coursesArray)) {
+                    throw new Error(`courses不是陣列格式: ${typeof coursesArray}`);
+                }
+
+                coursesData = coursesArray;
+                console.log('✅ 國內課程載入成功:', coursesData.length, '個課程');
+                console.log('📋 課程預覽:', coursesData.slice(0, 2));
+                
+                renderCourses(coursesData);
+                
+                $('#coursesLoading').hide();
+                $('#coursesContent').show();
+
+            } catch (error) {
+                console.error('❌ 載入國內課程失敗:', error);
+                
+                // 顯示詳細錯誤信息
+                $('#coursesError').find('p').html(`
+                    無法載入課程數據：<br>
+                    <strong>${error.message}</strong><br>
+                    <small>請檢查瀏覽器控制台獲取更多詳細信息</small>
+                `);
+                
+                $('#coursesLoading').hide();
+                $('#coursesError').show();
+            }
+        }
+
+        /**
+         * 載入國內師資數據
+         */
+        async function loadTeachers() {
+            console.log('👨‍🏫 開始載入國內師資數據');
+            
+            // 顯示載入狀態
+            $('#teachersLoading').show();
+            $('#teachersError').hide();
+            $('#teachersContent').hide();
+
+            try {
+                console.log('🔗 正在請求:', `${API_BASE_URL}/domestic_teachers`);
+                const response = await fetch(`${API_BASE_URL}/domestic_teachers`);
+                
+                console.log('📡 HTTP狀態:', response.status, response.statusText);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP錯誤: ${response.status} ${response.statusText}`);
+                }
+                
+                const result = await response.json();
+                console.log('📄 API完整響應:', result);
+
+                // 更靈活的數據結構檢查
+                let teachersArray = null;
+                
+                if (result.success && result.data && result.data.teachers) {
+                    // 標準格式：{success: true, data: {teachers: [...]}}
+                    teachersArray = result.data.teachers;
+                    console.log('✅ 使用標準格式');
+                } else if (result.teachers) {
+                    // 直接格式：{teachers: [...]}
+                    teachersArray = result.teachers;
+                    console.log('✅ 使用直接格式');
+                } else if (Array.isArray(result)) {
+                    // 陣列格式：[{teacher1}, {teacher2}, ...]
+                    teachersArray = result;
+                    console.log('✅ 使用陣列格式');
+                } else if (result.data && Array.isArray(result.data)) {
+                    // 包裝陣列格式：{data: [{teacher1}, {teacher2}]}
+                    teachersArray = result.data;
+                    console.log('✅ 使用包裝陣列格式');
+                } else {
+                    console.error('❌ 無法識別的數據格式:', result);
+                    throw new Error(`API返回數據格式錯誤。預期包含teachers陣列，實際收到: ${JSON.stringify(result).substring(0, 200)}...`);
+                }
+
+                if (!Array.isArray(teachersArray)) {
+                    throw new Error(`teachers不是陣列格式: ${typeof teachersArray}`);
+                }
+
+                teachersData = teachersArray;
+                console.log('✅ 國內師資載入成功:', teachersData.length, '位師資');
+                console.log('📋 師資預覽:', teachersData.slice(0, 2));
+                
+                renderTeachers(teachersData);
+                
+                $('#teachersLoading').hide();
+                $('#teachersContent').show();
+
+            } catch (error) {
+                console.error('❌ 載入國內師資失敗:', error);
+                
+                // 顯示詳細錯誤信息
+                $('#teachersError').find('p').html(`
+                    無法載入師資數據：<br>
+                    <strong>${error.message}</strong><br>
+                    <small>請檢查瀏覽器控制台獲取更多詳細信息</small>
+                `);
+                
+                $('#teachersLoading').hide();
+                $('#teachersError').show();
+            }
+        }
+
+        /**
+         * 渲染課程列表
+         */
+        function renderCourses(courses) {
+            const container = $('#coursesContainer');
+            container.empty();
+
+            if (!courses || courses.length === 0) {
+                container.html('<div class="col-12 text-center"><p class="text-muted">暫無課程數據</p></div>');
+                return;
+            }
+
+            courses.forEach((course, index) => {
+                const courseCard = createCourseCard(course);
+                container.append(courseCard);
+                
+                // 添加淡入動畫
+                setTimeout(() => {
+                    courseCard.addClass('fade-in');
+                }, index * 100);
+            });
+        }
+
+        /**
+         * 創建課程卡片
+         */
+        function createCourseCard(course) {
+            const imageUrl = course.image_url || 'https://via.placeholder.com/300x200?text=Course+Image';
+            const status = course.is_expired ? '報名截止' : '可報名';
+            const statusClass = course.is_expired ? 'no-state' : 'open-state';
+            const tagsHtml = (course.tags || []).map(tag => `<span>${tag}</span>`).join('');
+            
+            return $(`
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="${course.url || '#'}" ${!course.url ? 'onclick="return false;"' : ''}>
+                                <div class="card-img" data-src="${imageUrl}" style="background-image: url('${imageUrl}');">
+                                </div>
+                                <div class="card-state ${statusClass}">${status}</div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <a href="${course.url || '#'}" ${!course.url ? 'onclick="return false;"' : ''}>
+                                    ${course.title || '未命名課程'}
+                                </a>
+                            </div>
+                            <div class="card-text">
+                                ${course.description || ''}
+                            </div>
+                            <div class="card-tag">
+                                ${tagsHtml}
+                            </div>
+                            <div class="card-location">上課地點：${course.location || '待確認'}</div>
+                            <div class="card-location" data-bird="1" data-end="${course.end_date || ''}">
+                                費用：<span>${course.price_amount || course.price || '待確認'}</span>
+                            </div>
+                            <div class="card-flex">
+                                ${course.end_date ? `<small class="text-muted">截止日期：${course.end_date}</small>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+        }
+
+        /**
+         * 渲染師資列表
+         */
+        function renderTeachers(teachers) {
+            const container = $('#teachersContainer');
+            container.empty();
+
+            if (!teachers || teachers.length === 0) {
+                container.html('<div class="col-12 text-center"><p class="text-muted">暫無師資數據</p></div>');
+                return;
+            }
+
+            teachers.forEach((teacher, index) => {
+                const teacherCard = createTeacherCard(teacher);
+                container.append(teacherCard);
+                
+                // 添加淡入動畫
+                setTimeout(() => {
+                    teacherCard.addClass('fade-in');
+                }, index * 100);
+            });
+        }
+
+        /**
+         * 創建師資卡片
+         */
+        function createTeacherCard(teacher) {
+            const imageUrl = teacher.image_url || 'https://via.placeholder.com/150x150?text=Teacher';
+            const displayName = teacher.name_en ? `${teacher.name}(${teacher.name_en})` : teacher.name;
+            const description = teacher.description || teacher.organization || '';
+            
+            return $(`
+                <div class="col-6">
+                    <a href="${teacher.url || '#'}" class="card teacher-card" ${!teacher.url ? 'onclick="return false;"' : ''}>
+                        <div class="card-header">
+                            <img class="card-img" data-src="${imageUrl}" src="${imageUrl}" alt="${teacher.name || '師資照片'}" onerror="this.src='https://via.placeholder.com/150x150?text=Teacher'">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-name">${displayName || '未命名師資'}</div>
+                            <div class="card-item">
+                                <div class="card-subtext">
+                                    ${description}
+                                    ${teacher.title ? `<br>${teacher.title}` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `);
+        }
+
+        /**
+         * 顯示課程tab
+         */
+        function showCourses() {
+            currentTab = 'courses';
+            if (!coursesData) {
+                loadCourses();
+            }
+        }
+
+        /**
+         * 顯示師資tab
+         */
+        function showTeachers() {
+            currentTab = 'teachers';
+            if (!teachersData) {
+                loadTeachers();
+            }
+        }
+
+        /**
+         * 搜索功能
+         */
+        async function searchCourses(event) {
+            event.preventDefault();
+            
+            const keyword = $('#searchKeyword').val() || $('#searchKeyword2').val();
+            if (!keyword.trim()) {
+                alert('請輸入搜索關鍵字');
+                return;
+            }
+
+            console.log('🔍 開始搜索國內課程:', keyword);
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/search/courses?q=${encodeURIComponent(keyword)}&type=domestic`);
+                const result = await response.json();
+
+                if (result.success) {
+                    displaySearchResults(result, keyword);
+                } else {
+                    throw new Error('搜索失敗');
+                }
+
+            } catch (error) {
+                console.error('❌ 搜索失敗:', error);
+                alert('搜索失敗，請重試');
+            }
+        }
+
+        /**
+         * 顯示搜索結果
+         */
+        function displaySearchResults(result, keyword) {
+            const totalResults = result.summary.domestic_count;
+            const courses = result.results.domestic;
+
+            if (totalResults === 0) {
+                $('#searchResultsContent').html(`<p>沒有找到包含 "${keyword}" 的課程</p>`);
+            } else {
+                let html = `<p>找到 <strong>${totalResults}</strong> 個包含 "${keyword}" 的課程：</p>`;
+                html += '<div class="row">';
+                
+                courses.forEach(course => {
+                    html += `
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">${course.title}</h6>
+                                    <p class="card-text small">${course.description || '無描述'}</p>
+                                    <div class="small text-muted">
+                                        地點：${course.location || '未指定'} | 
+                                        費用：${course.price || '未指定'}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+                $('#searchResultsContent').html(html);
+            }
+
+            $('#searchResults').show();
+            $('html, body').animate({
+                scrollTop: $('#searchResults').offset().top - 100
+            }, 500);
+        }
+
+        /**
+         * 清除搜索結果
+         */
+        function clearSearch() {
+            $('#searchResults').hide();
+            $('#searchKeyword').val('');
+            $('#searchKeyword2').val('');
+        }
+
+        // 原有的腳本保持不變
+        $(function() {
+            // VR設置檢查
             $.ajax({
                 type: 'GET',
                 url: '/meettaiwan/training/mice/vr-set',
@@ -596,6 +951,7 @@
                     if (res == 'active') $('#vrswitch').show();
                 }
             }).then(function() {
+                // 訪客統計
                 $.ajax({
                     url: '/meettaiwan/training/mice/log',
                     data: {
@@ -610,34 +966,10 @@
                             appStr += `<span class="digit-counter">${str.charAt(i)}</span>`;
                         }
                         $('#digtiplace').html('訪客人數：' + appStr);
-                        let pathname = window.location.pathname;
-                        if (res.warn && pathname !== '/meettaiwan/training/mice/personal') {
-                            Swal.fire({
-                                title: '您的密碼已經很久沒有更新，建議更新密碼',
-                                showDenyButton: true,
-                                showCancelButton: true,
-                                confirmButtonText: '立即更新密碼',
-                                denyButtonText: `延後三個月`,
-                                cancelButtonText: `等下再說`,
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    location.href = "/meettaiwan/training/mice/personal";
-                                } else if (result.isDenied) {
-                                    $.ajax({
-                                url: '/meettaiwan/training/mice/later-update',
-                                type:'POST'
-                            });
-                                    Swal.fire('已延後更新', '', 'info')
-                                }
-                            })
-                        }
                     }
                 });
-            })
-
-        })
+            });
+        });
     </script>
-
-
-
-<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div><div id="trend_notification_app" class="trend_notification_app_outer"><div id="trend_notification"><div id="trend_notification_con"></div></div></div></body><umsdataelement id="UMSDataElement" style="display: none;"></umsdataelement><div id="tmtoolbar_manual_rating_injected" style="display: none;">init</div><div id="UMSSendDataEventElement" style="display: none;">init</div></html>
+</body>
+</html>
