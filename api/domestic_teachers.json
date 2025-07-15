@@ -1,0 +1,54 @@
+{
+  "teachers": [
+    {
+      "id": 52,
+      "name": "倪家珍",
+      "name_en": null,
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-teacher/52",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/teacher/倪家珍.jpg",
+      "title": null,
+      "organization": "致理科技大學教授",
+      "description": "致理科技大學教授"
+    },
+    {
+      "id": 53,
+      "name": "陳淑莉",
+      "name_en": null,
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-teacher/53",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/teacher/陳淑莉.jpg",
+      "title": null,
+      "organization": "中華大學教授",
+      "description": "中華大學教授"
+    },
+    {
+      "id": 54,
+      "name": "黃振家",
+      "name_en": null,
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-teacher/54",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/teacher/黃振家.jpg",
+      "title": "財團法人台北市會展產業發展基金會 董事",
+      "organization": "醒吾科技大學教授,",
+      "description": "醒吾科技大學教授,\r\n財團法人台北市會展產業發展基金會 董事"
+    },
+    {
+      "id": 55,
+      "name": "張瑛",
+      "name_en": null,
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-teacher/55",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/teacher/張瑛.jpg",
+      "title": null,
+      "organization": "經濟部會展人才培訓計劃 專任講師,德明科技大學行銷系會展組 助理教授",
+      "description": "經濟部會展人才培訓計劃 專任講師,德明科技大學行銷系會展組 助理教授"
+    },
+    {
+      "id": 56,
+      "name": "賴元化",
+      "name_en": null,
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-teacher/56",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/teacher/賴元化.jpg",
+      "title": null,
+      "organization": "經濟部會展人才培訓計劃 專任講師",
+      "description": "經濟部會展人才培訓計劃 專任講師"
+    }
+  ]
+}

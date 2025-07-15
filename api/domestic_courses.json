@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": 2,
+      "title": "2022年度國內會展認證-線上課程第3班",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/course-content/2",
+      "image_url": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/2022年度國內認證班.jpg",
+      "status": "報名截止",
+      "location": "線上",
+      "price": "3300",
+      "price_amount": 3300,
+      "tags": [
+        "初階課程",
+        "認證課桯",
+        "國內認證"
+      ],
+      "description": "為有志從事會議、展覽、獎勵旅遊等行業人員，特開辦國內會展認證班及衝刺班課程。邀請國內會展專家及業者擔任講師，提供最新會展趨勢及專業知識。虛實整合的Hybrid Meeting及OMO等資訊，深入淺出的課程內容與經驗分享，讓學員深刻瞭解會展產業之範疇與特性，協助學員順利通過「會議展覽專業人員認證考試」，可更新國內會展認證證書時數30小時。日期111年8月6日",
+      "end_date": "2023-12-05",
+      "is_expired": true
+    }
+  ]
+}
