@@ -8,6 +8,8 @@ const faqApiRoutes = require('./question-api/server');  // 引入 question-api �
 const app = express();
 const port = 3004;  // 設定主伺服器端口
 
+app.use(cors());
+
 // 註冊各個模組的路由
 app.use('/api/news', newsApiRoutes);  // 註冊 news-api 路由
 app.use('/api/courses', courseApiRoutes);  // 註冊 course-api 路由
