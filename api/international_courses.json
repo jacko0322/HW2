@@ -1,0 +1,58 @@
+[
+  {
+    "id": 32,
+    "title": "CEM國際認證-223",
+    "url": "https://mice2.tako.life/meettaiwan/training/mice/course-content/32",
+    "image_url": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/course_01.jpg",
+    "status": "報名截止",
+    "location": "第4會議室、福華文教會館",
+    "price": "3000",
+    "price_amount": 3000,
+    "tags": ["國際認證", "進階課程"],
+    "description": "",
+    "end_date": "2024-10-25",
+    "is_expired": true
+  },
+  {
+    "id": 9,
+    "title": "2022國際展覽認證CEM課程暨考試",
+    "url": "https://mice2.tako.life/meettaiwan/training/mice/course-content/9",
+    "image_url": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/course_cem.jpg",
+    "status": "報名截止",
+    "location": "線上",
+    "price": "3000",
+    "price_amount": 3000,
+    "tags": ["中階課程", "認證課程", "國際認證"],
+    "description": "",
+    "end_date": "2023-03-31",
+    "is_expired": true
+  },
+  {
+    "id": 6,
+    "title": "2022年國際會議CMP認證課程報名【衝刺班】",
+    "url": "https://mice2.tako.life/meettaiwan/training/mice/course-content/6",
+    "image_url": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/course_cmp.jpg",
+    "status": "報名截止",
+    "location": "台北",
+    "price": "8000",
+    "price_amount": 8000,
+    "tags": ["中階課程", "認證課程", "國際認證"],
+    "description": "",
+    "end_date": "2022-07-20",
+    "is_expired": true
+  },
+  {
+    "id": 5,
+    "title": "2022年國際會議CMP認證課程 【先修班】",
+    "url": "https://mice2.tako.life/meettaiwan/training/mice/course-content/5",
+    "image_url": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/course_cmp.jpg",
+    "status": "報名截止",
+    "location": "線上",
+    "price": "10000",
+    "price_amount": 10000,
+    "tags": ["中階課程", "認證課程", "國際認證"],
+    "description": "",
+    "end_date": "2022-07-06",
+    "is_expired": true
+  }
+]
