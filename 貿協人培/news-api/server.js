@@ -14,13 +14,18 @@ app.get('/api/categories', (req, res) => {
   res.json(newsData.categories); // 返回所有類別
 });
 
-// 端點：根據類別名稱返回消息
+// 端點：根據類別名稱返回最新五筆消息
 app.get('/api/news/category/:categoryName', (req, res) => {
   const categoryName = req.params.categoryName;
   const category = newsData.news.find(c => c.category === categoryName);
 
   if (category) {
-    res.json(category);
+    // 根據時間排序，然後返回最新的 5 筆消息
+    const latestNews = category.messages
+      .sort((a, b) => new Date(b.update_date) - new Date(a.update_date)) // 按照 update_date 排序
+      .slice(0, 5);  // 只取最新的 5 筆
+
+    res.json({ category: categoryName, messages: latestNews });
   } else {
     res.status(404).json({ message: '類別未找到' });
   }
