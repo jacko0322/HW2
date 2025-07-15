@@ -239,68 +239,79 @@
         
 
         <div class="news-block">
-            <div class="container-fluid">
-                <div class="title-outer">
-                    <div class="title">最新消息</div>
-                </div>
-                <div class="line-outer">
-                    <div class="line"><img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/line_middle.png" src="./首頁_files/line_middle.png"></div>
-                </div>
-                <div class="list-outer">
-                                        <li class="list-item">
-                        <div class="list-link">
-                            <div class="category">一般公告</div>
-                            <div class="date">2024-03-28</div>
-                            <div class="title">ziyi測試2024擴充案編輯器_新增</div>
-                            <div class="btn-box">
-                                <a href="https://mice2.tako.life/news-content/10071" class="btn btn-more">了解更多</a>
-                            </div>
-                        </div>
-                    </li>
-                                        <li class="list-item">
-                        <div class="list-link">
-                            <div class="category">一般公告</div>
-                            <div class="date">2023-06-12</div>
-                            <div class="title">ziyi測試2024擴充案編輯器</div>
-                            <div class="btn-box">
-                                <a href="https://mice2.tako.life/news-content/71" class="btn btn-more">了解更多</a>
-                            </div>
-                        </div>
-                    </li>
-                                        <li class="list-item">
-                        <div class="list-link">
-                            <div class="category">一般公告</div>
-                            <div class="date">2022-12-31</div>
-                            <div class="title">測試版******112年度協助會展專業人員參與國際會展組織年會方案 作業須知</div>
-                            <div class="btn-box">
-                                <a href="https://mice2.tako.life/news-content/70" class="btn btn-more">了解更多</a>
-                            </div>
-                        </div>
-                    </li>
-                                        <li class="list-item">
-                        <div class="list-link">
-                            <div class="category">一般公告</div>
-                            <div class="date">2023-05-05</div>
-                            <div class="title">112年度協助會展專業人員參與國際會展組織年會方案 作業須知</div>
-                            <div class="btn-box">
-                                <a href="https://mice2.tako.life/news-content/69" class="btn btn-more">了解更多</a>
-                            </div>
-                        </div>
-                    </li>
-                                        <li class="list-item">
-                        <div class="list-link">
-                            <div class="category">工商服務</div>
-                            <div class="date">2022-06-01</div>
-                            <div class="title">加入外貿協會Line好友，拓銷活動服務訊息通通有</div>
-                            <div class="btn-box">
-                                <a href="https://mice2.tako.life/news-content/65" class="btn btn-more">了解更多</a>
-                            </div>
-                        </div>
-                    </li>
-                                    </div>
-            </div>
-        </div>
-
+		<div class="container-fluid">
+			<div class="title-outer">
+				<div class="title">最新消息</div>
+			</div>
+			<div class="line-outer">
+				<div class="line">
+					<img data-src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/line_middle.png" src="https://mice2.tako.life/meettaiwan/training/mice/mice/images/line_middle.png">
+				</div>
+			</div>
+			<div class="list-outer" id="news-list">
+				<!-- 最新 5 筆資料將被動態加載 -->
+			</div>
+		</div>
+	</div>
+	<script>
+		// 用來抓取資料並更新頁面的 JavaScript 代碼
+		// 假設API URL為：http://localhost:3000/api/news/category/一般公告
+		const apiUrl = 'http://localhost:3000/api/news/category/';
+		// 抓取最新消息的資料並顯示
+		function fetchLatestNews(categoryName) {
+			// 使用 fetch 請求獲取指定類別的最新資料
+			fetch(apiUrl + encodeURIComponent(categoryName))
+				.then(response => response.json())
+				.then(data => {
+					const newsList = document.getElementById('news-list');
+					newsList.innerHTML = ''; // 清空現有列表
+					// 只顯示最新的 5 筆資料
+					const latestNews = data.messages.slice(0, 5);
+					latestNews.forEach(newsItem => {
+						const listItem = document.createElement('li');
+						listItem.classList.add('list-item'); // 確保使用了現有的樣式類別
+						const listLink = document.createElement('div');
+						listLink.classList.add('list-link');
+						// 顯示類別
+						const category = document.createElement('div');
+						category.classList.add('category');
+						category.textContent = newsItem.category; // 顯示類別
+						// 顯示日期
+						const date = document.createElement('div');
+						date.classList.add('date');
+						date.textContent = newsItem.update_date; // 顯示更新日期
+						// 顯示標題
+						const title = document.createElement('div');
+					        title.classList.add('title');
+					        title.textContent = newsItem.title; // 顯示消息標題
+					
+					        // 顯示了解更多按鈕
+						const btnBox = document.createElement('div');
+					        btnBox.classList.add('btn-box');
+					        const link = document.createElement('a');
+					        link.classList.add('btn', 'btn-more');
+					        link.href = newsItem.link[0].url; // 設置鏈接
+					        link.textContent = '了解更多';
+						btnBox.appendChild(link);
+					
+					        listLink.appendChild(category);
+					        listLink.appendChild(date);
+					        listLink.appendChild(title);
+					        listLink.appendChild(btnBox);
+					
+					        listItem.appendChild(listLink);
+					        newsList.appendChild(listItem);
+					});
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+		}
+		// 預設顯示 "一般公告" 類別的最新消息
+		window.onload = () => {
+			fetchLatestNews('一般公告');
+		};
+	</script>
 
         
         <div class="line-block">
