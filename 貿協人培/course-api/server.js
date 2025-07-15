@@ -1,12 +1,12 @@
 const express = require('express');
-const eventsData = require('./eventsData.js'); // 引入會展資料
+const eventsData = require('./eventsData');  // 使用 require 引入資料
 
 const app = express();
 const port = 3002; // 設定為 3002（你可以選擇其他端口）
 
 // 端點：返回所有會展資料
 app.get('/api/events', (req, res) => {
-  res.json(eventsData); // 返回會展資料
+  res.json(eventsData); // 返回所有會展資料
 });
 
 // 端點：根據會展 ID 返回資料
