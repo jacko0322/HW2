@@ -1,10 +1,8 @@
-// 引入 Express 框架
 const express = require('express');
+const filesData = require('./filesData.js'); // 引入 filesData.js
+
 const app = express();
 const port = 3004; // 設定伺服器端口
-
-// 引入外部的文件資料
-const filesData = require('./filesData.js');
 
 // 端點：返回所有文件資料
 app.get('/api/files', (req, res) => {
@@ -19,7 +17,7 @@ app.get('/api/files/:year', (req, res) => {
   if (files) {
     res.json(files); // 返回指定年份的文件資料
   } else {
-    res.status(404).json({ message: '年份資料未找到' });
+    res.status(404).json({ message: '年份資料未找到' }); // 未找到資料
   }
 });
 
