@@ -1,5 +1,5 @@
 const express = require('express');
-const newsData = require('./newsData.js');
+const newsData = require('./newsData');  // 使用 require 引入
 
 const app = express();
 const port = 3000;
