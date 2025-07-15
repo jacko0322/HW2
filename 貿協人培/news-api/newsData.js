@@ -1,5 +1,5 @@
 // newsData.js
-export default {
+module.exports = {
   categories: ["一般公告", "會展課程", "認證考試", "工商服務", "新聞報導", "重要快訊", "退費辦法", "常見問題"],
   news: [
     {
