@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>沙龍職能清單</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f9ff;
+      padding: 30px;
+    }
+    h1 {
+      color: #005a9c;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 10px auto;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>沙龍職能清單</h1>
+  <div id="jobList"></div>
+
+  <script>
+    fetch('/api/salon-jobs')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('jobList');
+        data.forEach(job => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h2>${job.title}</h2>
+            <p><strong>核心技能：</strong><ul>${job.core_skills.map(skill => `<li>${skill}</li>`).join('')}</ul></p>
+            <p><strong>專業技能：</strong><ul>${job.professional_skills.map(skill => `<li>${skill}</li>`).join('')}</ul></p>
+            <p><strong>經驗需求：</strong> ${job.experience}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        document.getElementById('jobList').innerHTML = '<p style="color:red;">❌ 無法載入資料</p>';
+        console.error('Fetch error:', error);
+      });
+  </script>
+</body>
+</html>
