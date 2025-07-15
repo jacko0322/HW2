@@ -260,52 +260,55 @@
 		// 抓取最新消息的資料並顯示
 		function fetchLatestNews(categoryName) {
 			// 使用 fetch 請求獲取指定類別的最新資料
-			fetch(apiUrl + encodeURIComponent(categoryName))
-				.then(response => response.json())
-				.then(data => {
-					const newsList = document.getElementById('news-list');
-					newsList.innerHTML = ''; // 清空現有列表
-					// 只顯示最新的 5 筆資料
-					const latestNews = data.messages.slice(0, 5);
-					latestNews.forEach(newsItem => {
-						const listItem = document.createElement('li');
-						listItem.classList.add('list-item'); // 確保使用了現有的樣式類別
-						const listLink = document.createElement('div');
-						listLink.classList.add('list-link');
-						// 顯示類別
-						const category = document.createElement('div');
-						category.classList.add('category');
-						category.textContent = newsItem.category; // 顯示類別
-						// 顯示日期
-						const date = document.createElement('div');
-						date.classList.add('date');
-						date.textContent = newsItem.update_date; // 顯示更新日期
-						// 顯示標題
-						const title = document.createElement('div');
-					        title.classList.add('title');
-					        title.textContent = newsItem.title; // 顯示消息標題
-					
-					        // 顯示了解更多按鈕
-						const btnBox = document.createElement('div');
-					        btnBox.classList.add('btn-box');
-					        const link = document.createElement('a');
-					        link.classList.add('btn', 'btn-more');
-					        link.href = newsItem.link[0].url; // 設置鏈接
-					        link.textContent = '了解更多';
-						btnBox.appendChild(link);
-					
-					        listLink.appendChild(category);
-					        listLink.appendChild(date);
-					        listLink.appendChild(title);
-					        listLink.appendChild(btnBox);
-					
-					        listItem.appendChild(listLink);
-					        newsList.appendChild(listItem);
-					});
-				})
-				.catch(error => {
-					console.error('Error:', error);
-				});
+			fetch('http://localhost:3000/api/news/category/一般公告')  // 假設 server.js 在 localhost:3000
+  .then(response => response.json())  // 解析返回的 JSON 資料
+  .then(data => {
+    const newsList = document.getElementById('news-list');
+    newsList.innerHTML = ''; // 清空現有列表
+    const latestNews = data.messages;  // 獲取最新的 5 筆資料
+
+    latestNews.forEach(newsItem => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('list-item'); // 使用現有的樣式類別
+      const listLink = document.createElement('div');
+      listLink.classList.add('list-link');
+      
+      // 顯示類別
+      const category = document.createElement('div');
+      category.classList.add('category');
+      category.textContent = newsItem.category;
+
+      // 顯示日期
+      const date = document.createElement('div');
+      date.classList.add('date');
+      date.textContent = newsItem.update_date;
+
+      // 顯示標題
+      const title = document.createElement('div');
+      title.classList.add('title');
+      title.textContent = newsItem.title;
+
+      // 顯示了解更多按鈕
+      const btnBox = document.createElement('div');
+      btnBox.classList.add('btn-box');
+      const link = document.createElement('a');
+      link.classList.add('btn', 'btn-more');
+      link.href = newsItem.link[0].url;
+      link.textContent = '了解更多';
+      btnBox.appendChild(link);
+
+      listLink.appendChild(category);
+      listLink.appendChild(date);
+      listLink.appendChild(title);
+      listLink.appendChild(btnBox);
+
+      listItem.appendChild(listLink);
+      newsList.appendChild(listItem);
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 		}
 		// 預設顯示 "一般公告" 類別的最新消息
 		window.onload = () => {
