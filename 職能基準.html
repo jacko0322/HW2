@@ -229,7 +229,10 @@
                     
                 
                                 <div class="row">
-					<script>
+					
+
+                                    <div class="col-md-12 col-lg-5">
+                                <script>
   					fetch("http://localhost:3000/api/salon-jobs")
     						.then(res => res.json())
     						.then(data => {
@@ -239,22 +242,6 @@
       						document.getElementById("jsonOutput").textContent = "❌ 無法載入資料：" + err.message;
     							});
 						</script>
-
-                                    <div class="col-md-12 col-lg-5">
-                                                    <div class="pagetitle-outer">
-                                                        <div class="title text-right">123</div>
-                                                    </div>
-                                                    <div class="detail-outer detail-box">
-                                                        <p>
-                                                            null
-                                                        </p>
-                                                    </div>
-                                                    <div class="detail-outer text-right">
-                                                        <p>
-                                                            詳細之報告內容請詳參<a href="https://mice2.tako.life/meettaiwan/training/mice/uploads/benchmark/20231211112730969.pdf" class="download">附件檔案</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
                                     <div class="col-lg-2"></div>
                                     
                                 </div></div>
