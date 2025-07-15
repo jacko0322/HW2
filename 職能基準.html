@@ -229,6 +229,17 @@
                     
                 
                                 <div class="row">
+					<script>
+  fetch("http://localhost:3000/api/salon-jobs")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("jsonOutput").textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+      document.getElementById("jsonOutput").textContent = "❌ 無法載入資料：" + err.message;
+    });
+</script>
+
                                     <div class="col-md-12 col-lg-5">
                                                     <div class="pagetitle-outer">
                                                         <div class="title text-right">123</div>
