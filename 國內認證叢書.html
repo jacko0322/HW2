@@ -363,11 +363,16 @@
             $('#error-books').hide();
             $('#books-container').empty();
 
-            // 調用API
+            // 調用API - 添加額外的請求選項
             $.ajax({
                 url: `${apiBaseUrl}/domestic_books`,
                 method: 'GET',
                 timeout: 15000, // 15秒超時
+                crossDomain: true, // 明確啟用跨域
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 success: function(response) {
                     console.log('✅ API回應成功:', response);
                     
