@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "source": "MICE台灣會展人才培育與認證網站",
+    "url": "https://mice2.tako.life/meettaiwan/training/mice/books",
+    "extractedDate": "2025-01-16T13:30:00.000Z",
+    "totalBooks": 14,
+    "category": "會展叢書",
+    "description": "會議展覽叢書資料，包含書名、價格、封面圖片等完整資訊"
+  },
+  "statistics": {
+    "totalBooks": 14,
+    "priceRange": {
+      "min": 150,
+      "max": 31500,
+      "average": 2721
+    },
+    "priceDistribution": {
+      "100-299": 3,
+      "300-499": 6,
+      "500-999": 3,
+      "1000以上": 2
+    }
+  },
+  "books": [
+    {
+      "id": 11,
+      "title": "會展英文",
+      "fullTitle": "＃1 會展英文",
+      "titleNumber": 1,
+      "price": 450,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_11.jpg",
+      "coverNumber": "11",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/11",
+      "buttonIndex": 0,
+      "category": "會展叢書"
+    },
+    {
+      "id": 12,
+      "title": "獎勵旅遊與活動管理",
+      "fullTitle": "＃2 獎勵旅遊與活動管理",
+      "titleNumber": 2,
+      "price": 450,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_12.jpg",
+      "coverNumber": "12",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/12",
+      "buttonIndex": 1,
+      "category": "會展叢書"
+    },
+    {
+      "id": 13,
+      "title": "會議規劃與管理",
+      "fullTitle": "＃3 會議規劃與管理",
+      "titleNumber": 3,
+      "price": 450,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_13.jpg",
+      "coverNumber": "13",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/13",
+      "buttonIndex": 2,
+      "category": "會展叢書"
+    },
+    {
+      "id": 14,
+      "title": "會展緒論",
+      "fullTitle": "＃4 會展緒論",
+      "titleNumber": 4,
+      "price": 450,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_14.jpg",
+      "coverNumber": "14",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/14",
+      "buttonIndex": 3,
+      "category": "會展叢書"
+    },
+    {
+      "id": 15,
+      "title": "展覽規劃與管理",
+      "fullTitle": "＃5 展覽規劃與管理",
+      "titleNumber": 5,
+      "price": 450,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_15.jpg",
+      "coverNumber": "15",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/15",
+      "buttonIndex": 4,
+      "category": "會展叢書"
+    },
+    {
+      "id": 19,
+      "title": "會議展覽業叢書(套書5本)",
+      "fullTitle": "＃6 會議展覽業叢書(套書5本)",
+      "titleNumber": 6,
+      "price": 1800,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_19.jpg",
+      "coverNumber": "19",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/19",
+      "buttonIndex": 5,
+      "category": "會展叢書"
+    },
+    {
+      "id": 20,
+      "title": "會議展覽業叢書(20本含以上)",
+      "fullTitle": "＃7 會議展覽業叢書(20本含以上)",
+      "titleNumber": 7,
+      "price": 31500,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_20.jpg",
+      "coverNumber": "20",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/20",
+      "buttonIndex": 6,
+      "category": "會展叢書"
+    },
+    {
+      "id": 1,
+      "title": "會展產業概論",
+      "fullTitle": "＃8 會展產業概論",
+      "titleNumber": 8,
+      "price": 300,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_01.jpg",
+      "coverNumber": "01",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/1",
+      "buttonIndex": 7,
+      "category": "會展叢書"
+    },
+    {
+      "id": 2,
+      "title": "國際會議活動管理實務",
+      "fullTitle": "＃9 國際會議活動管理實務",
+      "titleNumber": 9,
+      "price": 550,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_02.jpg",
+      "coverNumber": "02",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/2",
+      "buttonIndex": 8,
+      "category": "會展叢書"
+    },
+    {
+      "id": 3,
+      "title": "展覽活動規劃",
+      "fullTitle": "＃10 展覽活動規劃",
+      "titleNumber": 10,
+      "price": 500,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_03.jpg",
+      "coverNumber": "03",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/3",
+      "buttonIndex": 9,
+      "category": "會展叢書"
+    },
+    {
+      "id": 4,
+      "title": "會議與展覽現場管理",
+      "fullTitle": "＃11 會議與展覽現場管理",
+      "titleNumber": 11,
+      "price": 250,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_04.jpg",
+      "coverNumber": "04",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/4",
+      "buttonIndex": 10,
+      "category": "會展叢書"
+    },
+    {
+      "id": 5,
+      "title": "會展行銷規劃",
+      "fullTitle": "＃12 會展行銷規劃",
+      "titleNumber": 12,
+      "price": 600,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_05.jpg",
+      "coverNumber": "05",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/5",
+      "buttonIndex": 11,
+      "category": "會展叢書"
+    },
+    {
+      "id": 6,
+      "title": "獎勵旅遊",
+      "fullTitle": "＃13 獎勵旅遊",
+      "titleNumber": 13,
+      "price": 150,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_06.jpg",
+      "coverNumber": "06",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/6",
+      "buttonIndex": 12,
+      "category": "會展叢書"
+    },
+    {
+      "id": 7,
+      "title": "活動管理",
+      "fullTitle": "＃14 活動管理",
+      "titleNumber": 14,
+      "price": 200,
+      "currency": "TWD",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/mice/images/book_07.jpg",
+      "coverNumber": "07",
+      "bookUrl": "https://mice2.tako.life/meettaiwan/training/mice/books/7",
+      "buttonIndex": 13,
+      "category": "會展叢書"
+    }
+  ]
+}
