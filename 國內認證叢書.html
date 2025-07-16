@@ -336,14 +336,14 @@
         
         // 🔧 API配置
         function getApiUrl() {
-            // 🔗 localtunnel URL
-            const localtunnelUrl = 'https://chilly-spoons-love.loca.lt'; // ✅ 您的實際localtunnel URL
+            // 🌐 Vercel部署的API URL（成功運行！）
+            const vercelUrl = 'https://mice-hb8jt4v9o-jackos-projects-85062748.vercel.app';
             
             // 自動偵測環境
             if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
                 return 'http://localhost:3000/api'; // 本地開發
             } else {
-                return localtunnelUrl + '/api'; // GitHub Pages使用localtunnel
+                return vercelUrl + '/api'; // GitHub Pages使用Vercel
             }
         }
         
@@ -353,7 +353,7 @@
         console.log('🌍 當前環境:', window.location.hostname);
         console.log('🔗 使用API地址:', apiBaseUrl);
 
-        // 🆕 從API載入書籍資料
+        // 🆕 從API載入書籍資料（增強版 - 自動檢測端點）
         function loadBooks() {
             console.log('📚 開始載入書籍資料...');
             console.log('🔗 API地址:', apiBaseUrl);
@@ -363,96 +363,73 @@
             $('#error-books').hide();
             $('#books-container').empty();
 
-            // 調用API - 添加額外的請求選項
-            $.ajax({
-                url: `${apiBaseUrl}/domestic_books`,
-                method: 'GET',
-                timeout: 15000, // 15秒超時
-                crossDomain: true, // 明確啟用跨域
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                success: function(response) {
-                    console.log('✅ API回應成功:', response);
-                    
-                    if (response.success && response.data && response.data.books) {
-                        booksList = response.data.books;
-                        console.log(`📖 成功載入 ${booksList.length} 本書籍`);
-                        
-                        // 隱藏載入狀態
-                        $('#loading-books').hide();
-                        
-                        // 渲染書籍
-                        renderBooks();
-                        
-                        // 顯示統計信息
-                        console.log(`📊 書籍統計 - 總數: ${booksList.length}, 價格範圍: ${Math.min(...booksList.map(b => b.price))} - ${Math.max(...booksList.map(b => b.price))} 元`);
-                        
-                    } else {
-                        throw new Error('API回應格式不正確');
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('❌ 載入書籍失敗:', error);
-                    console.error('❌ 狀態:', status);
-                    console.error('❌ 回應:', xhr.responseText);
-                    console.error('❌ HTTP狀態碼:', xhr.status);
-                    
-                    // 隱藏載入狀態，顯示錯誤
-                    $('#loading-books').hide();
-                    $('#error-books').show();
-                    
-                    // 設置詳細的錯誤信息
-                    let errorMsg = '';
-                    let solutions = '';
-                    
-                    if (status === 'timeout') {
-                        errorMsg = '請求超時 - API服務器響應時間過長';
-                        solutions = `
-                            • 檢查API服務器是否正常運行<br>
-                            • 檢查網絡連接<br>
-                            • 重新啟動API服務器
-                        `;
-                    } else if (xhr.status === 0) {
-                        errorMsg = 'CORS錯誤或無法連接到API服務器';
-                        solutions = `
-                            • 確保API服務器正在運行：<code>node server.js</code><br>
-                            • 檢查CORS設置是否正確<br>
-                            • 如果在GitHub Pages上，考慮使用ngrok：<code>ngrok http 3000</code><br>
-                            • 或部署API到雲端服務（Heroku、Vercel等）
-                        `;
-                    } else if (xhr.status === 404) {
-                        errorMsg = 'API端點不存在 (404)';
-                        solutions = `
-                            • 檢查API URL是否正確<br>
-                            • 確認服務器路由配置<br>
-                            • 檢查 /api/domestic_books 端點是否存在
-                        `;
-                    } else if (xhr.status >= 500) {
-                        errorMsg = `服務器內部錯誤 (${xhr.status})`;
-                        solutions = `
-                            • 檢查服務器console輸出<br>
-                            • 確認domestic_books.json檔案存在<br>
-                            • 重新啟動API服務器
-                        `;
-                    } else {
-                        errorMsg = `未知錯誤 (${xhr.status}: ${error})`;
-                        solutions = `
-                            • 檢查網絡連接<br>
-                            • 重新啟動API服務器<br>
-                            • 查看瀏覽器開發者工具的Network選項卡
-                        `;
-                    }
-                    
-                    $('#error-message').html(`
-                        <strong>錯誤：</strong>${errorMsg}<br><br>
-                        <strong>API地址：</strong><code>${apiBaseUrl}/domestic_books</code><br><br>
-                        <strong>解決方案：</strong><br>
-                        ${solutions}
-                    `);
+            // 🔧 嘗試多個可能的端點
+            const endpoints = [
+                `${apiBaseUrl}/domestic_books`, // 原始端點
+                `${apiBaseUrl}/books`           // API Routes端點
+            ];
+
+            tryEndpoint(0);
+
+            function tryEndpoint(index) {
+                if (index >= endpoints.length) {
+                    // 所有端點都失敗了
+                    showError('所有API端點都無法訪問');
+                    return;
                 }
-            });
+
+                const currentEndpoint = endpoints[index];
+                console.log(`🔍 嘗試端點 ${index + 1}/${endpoints.length}: ${currentEndpoint}`);
+
+                $.ajax({
+                    url: currentEndpoint,
+                    method: 'GET',
+                    timeout: 15000,
+                    success: function(response) {
+                        console.log('✅ API回應成功:', response);
+                        
+                        if (response.success && response.data && response.data.books) {
+                            booksList = response.data.books;
+                            console.log(`📖 成功載入 ${booksList.length} 本書籍`);
+                            
+                            // 隱藏載入狀態
+                            $('#loading-books').hide();
+                            
+                            // 渲染書籍
+                            renderBooks();
+                            
+                            // 顯示統計信息
+                            console.log(`📊 書籍統計 - 總數: ${booksList.length}, 價格範圍: ${Math.min(...booksList.map(b => b.price))} - ${Math.max(...booksList.map(b => b.price))} 元`);
+                            
+                        } else {
+                            console.log('⚠️ API回應格式不正確，嘗試下一個端點');
+                            tryEndpoint(index + 1);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(`❌ 端點 ${index + 1} 失敗:`, error);
+                        console.error(`❌ 狀態:`, status);
+                        console.error(`❌ HTTP狀態碼:`, xhr.status);
+                        
+                        // 嘗試下一個端點
+                        tryEndpoint(index + 1);
+                    }
+                });
+            }
+
+            function showError(message) {
+                $('#loading-books').hide();
+                $('#error-books').show();
+                $('#error-message').html(`
+                    <strong>錯誤：</strong>${message}<br><br>
+                    <strong>嘗試的端點：</strong><br>
+                    ${endpoints.map((ep, i) => `${i + 1}. <code>${ep}</code>`).join('<br>')}<br><br>
+                    <strong>建議：</strong><br>
+                    • 檢查Vercel部署狀態<br>
+                    • 查看Vercel控制台日誌<br>
+                    • 確認domestic_books.json檔案存在
+                `);
+            }
         }
 
         // 🆕 渲染書籍列表
@@ -962,13 +939,15 @@
         $(function() {
             let pics = $('[data-src]');
             lazyload(pics);
-            $.ajax({
-                type: 'GET',
-                url: '/meettaiwan/training/mice/vr-set',
-                success: function(res) {
-                    if (res == 'active') $('#vrswitch').show();
-                }
-            }).then(function() {
+            
+            // 🚨 移除VR相關的AJAX請求，避免404錯誤
+            // $.ajax({
+            //     type: 'GET',
+            //     url: '/meettaiwan/training/mice/vr-set',
+            //     success: function(res) {
+            //         if (res == 'active') $('#vrswitch').show();
+            //     }
+            // }).then(function() {
                 $.ajax({
                     url: '/meettaiwan/training/mice/log',
                     data: {
@@ -1004,9 +983,13 @@
                                 }
                             })
                         }
+                    },
+                    error: function() {
+                        // 忽略這個錯誤，因為這是原始網站的功能
+                        console.log('💡 原始網站功能無法使用，已忽略');
                     }
                 });
-            })
+            // })
 
         })
     </script>
