@@ -333,16 +333,42 @@
     <script>
         // 🆕 全局變量
         let booksList = []; // 儲存從API載入的書籍資料
-        let apiBaseUrl = 'http://localhost:3000/api'; // API基礎URL，可根據需要修改
+        
+        // 🔧 API配置 - 根據環境自動選擇
+        function getApiBaseUrl() {
+            // 如果是在GitHub Pages上
+            if (window.location.hostname === 'jacko0322.github.io') {
+                // 選項1: 使用Heroku、Vercel等部署的API
+                // return 'https://your-api-domain.herokuapp.com/api';
+                
+                // 選項2: 使用GitHub Pages靜態JSON（臨時方案）
+                return window.location.origin + '/HW2/api'; // 🔧 修正：指向 /HW2/api/ 目錄
+                
+                // 選項3: 使用ngrok等工具暴露本地API
+                // return 'https://your-ngrok-url.ngrok.io/api';
+            } else {
+                // 本地開發環境
+                return 'http://localhost:3000/api';
+            }
+        }
+        
+        let apiBaseUrl = getApiBaseUrl();
 
         // 🆕 從API載入書籍資料
         function loadBooks() {
             console.log('📚 開始載入書籍資料...');
+            console.log('🔗 API地址:', apiBaseUrl);
             
             // 顯示載入狀態
             $('#loading-books').show();
             $('#error-books').hide();
             $('#books-container').empty();
+
+            // 檢查是否為GitHub Pages環境且使用靜態檔案
+            if (window.location.hostname === 'jacko0322.github.io' && apiBaseUrl.includes('github.io')) {
+                loadBooksFromStaticFile();
+                return;
+            }
 
             // 調用API
             $.ajax({
@@ -379,16 +405,78 @@
                     $('#error-books').show();
                     
                     // 設置錯誤信息
-                    let errorMsg = '無法連接到服務器，請檢查API服務是否正常運行。';
+                    let errorMsg = '無法連接到API服務器。';
                     if (status === 'timeout') {
                         errorMsg = '請求超時，請檢查網絡連接。';
+                    } else if (xhr.status === 0) {
+                        errorMsg = 'CORS錯誤或API服務器未運行。請確保API服務器正在運行並配置了正確的CORS設置。';
                     } else if (xhr.status === 404) {
                         errorMsg = 'API端點不存在，請檢查服務器配置。';
                     } else if (xhr.status >= 500) {
                         errorMsg = '服務器內部錯誤，請聯繫技術支援。';
                     }
                     
-                    $('#error-message').text(errorMsg);
+                    $('#error-message').html(`
+                        <strong>錯誤詳情：</strong><br>
+                        ${errorMsg}<br><br>
+                        <strong>可能的解決方案：</strong><br>
+                        1. 確保API服務器正在運行 (node server.js)<br>
+                        2. 檢查CORS設置是否正確<br>
+                        3. 使用本地環境測試<br>
+                        4. 考慮部署API到雲端服務
+                    `);
+                }
+            });
+        }
+
+        // 🆕 從靜態JSON檔案載入（GitHub Pages備用方案）
+        function loadBooksFromStaticFile() {
+            console.log('📄 從靜態檔案載入書籍資料...');
+            
+            $.ajax({
+                url: `${apiBaseUrl}/domestic_books.json`, // 🔧 這會解析為: /HW2/api/domestic_books.json
+                method: 'GET',
+                dataType: 'json',
+                timeout: 10000,
+                success: function(data) {
+                    console.log('✅ 靜態檔案載入成功:', data);
+                    
+                    // 適配不同的JSON結構
+                    let books = [];
+                    if (data.books) {
+                        books = data.books;
+                    } else if (data.data && data.data.books) {
+                        books = data.data.books;
+                    } else if (Array.isArray(data)) {
+                        books = data;
+                    }
+                    
+                    if (books.length > 0) {
+                        booksList = books;
+                        console.log(`📖 成功載入 ${booksList.length} 本書籍`);
+                        
+                        $('#loading-books').hide();
+                        renderBooks();
+                    } else {
+                        throw new Error('靜態檔案中沒有找到書籍資料');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('❌ 靜態檔案載入失敗:', error);
+                    console.error('❌ 請求URL:', `${apiBaseUrl}/domestic_books.json`);
+                    
+                    $('#loading-books').hide();
+                    $('#error-books').show();
+                    $('#error-message').html(`
+                        <strong>無法載入書籍資料</strong><br>
+                        請求路徑: <code>${apiBaseUrl}/domestic_books.json</code><br><br>
+                        <strong>請確認：</strong><br>
+                        1. domestic_books.json 檔案位於 <code>/HW2/api/</code> 目錄下<br>
+                        2. 檔案內容格式正確<br>
+                        3. GitHub Pages 已正確部署<br><br>
+                        <strong>或者：</strong><br>
+                        啟動本地API服務器進行測試
+                    `);
                 }
             });
         }
