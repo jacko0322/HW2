@@ -4,17 +4,17 @@ const newsData = require('./newsData');  // 使用 require 引入資料
 const router = express.Router();  // 使用 express.Router() 來定義路由
 
 // 端點：返回所有消息資料
-router.get('/api/news', (req, res) => {
+router.get('/', (req, res) => {  // 改為根路由
   res.json(newsData); // 返回所有資料
 });
 
 // 端點：返回所有類別
-router.get('/api/categories', (req, res) => {
+router.get('/categories', (req, res) => {  // 改為不再加 /api
   res.json(newsData.categories); // 返回所有類別
 });
 
 // 端點：根據類別名稱返回最新五筆消息
-router.get('/api/news/category/:categoryName', (req, res) => {
+router.get('/category/:categoryName', (req, res) => {  // 改為不再加 /api
   const categoryName = req.params.categoryName;
   const category = newsData.news.find(c => c.category === categoryName);
 
