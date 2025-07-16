@@ -336,14 +336,14 @@
         
         // 🔧 API配置
         function getApiUrl() {
-            // 🌐 Vercel部署的API URL（成功運行！）
-            const vercelUrl = 'https://mice-f0u8l061f-jackos-projects-85062748.vercel.app/';
+            // 🌐 Vercel部署的API URL（更新的URL，移除末尾斜線）
+            const vercelUrl = 'https://mice-f0u8l061f-jackos-projects-85062748.vercel.app'; // 🔥 新的URL
             
             // 自動偵測環境
             if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
                 return 'http://localhost:3000/api'; // 本地開發
             } else {
-                return vercelUrl + '/api'; // GitHub Pages使用Vercel
+                return vercelUrl + '/api'; // GitHub Pages使用Vercel（避免雙斜線）
             }
         }
         
@@ -353,7 +353,7 @@
         console.log('🌍 當前環境:', window.location.hostname);
         console.log('🔗 使用API地址:', apiBaseUrl);
 
-        // 🆕 從API載入書籍資料（增強版 - 自動檢測端點）
+        // 🆕 從API載入書籍資料（修復雙斜線問題）
         function loadBooks() {
             console.log('📚 開始載入書籍資料...');
             console.log('🔗 API地址:', apiBaseUrl);
@@ -363,12 +363,14 @@
             $('#error-books').hide();
             $('#books-container').empty();
 
-            // 🔧 嘗試多個可能的端點
+            // 🔧 修復URL構建，避免雙斜線
+            const baseUrl = apiBaseUrl.replace(/\/$/, ''); // 移除末尾斜線
             const endpoints = [
-                `${apiBaseUrl}/domestic_books`, // 原始端點
-                `${apiBaseUrl}/books`           // API Routes端點
+                `${baseUrl}/domestic_books`, // 原始端點
+                `${baseUrl}/books`           // API Routes端點
             ];
 
+            console.log('🔍 將嘗試的端點:', endpoints);
             tryEndpoint(0);
 
             function tryEndpoint(index) {
@@ -410,6 +412,7 @@
                         console.error(`❌ 端點 ${index + 1} 失敗:`, error);
                         console.error(`❌ 狀態:`, status);
                         console.error(`❌ HTTP狀態碼:`, xhr.status);
+                        console.error(`❌ 請求URL:`, currentEndpoint);
                         
                         // 嘗試下一個端點
                         tryEndpoint(index + 1);
@@ -424,10 +427,14 @@
                     <strong>錯誤：</strong>${message}<br><br>
                     <strong>嘗試的端點：</strong><br>
                     ${endpoints.map((ep, i) => `${i + 1}. <code>${ep}</code>`).join('<br>')}<br><br>
+                    <strong>可能的問題：</strong><br>
+                    • CORS預檢請求被重定向<br>
+                    • Vercel函數未正確部署<br>
+                    • domestic_books.json檔案缺失<br><br>
                     <strong>建議：</strong><br>
                     • 檢查Vercel部署狀態<br>
-                    • 查看Vercel控制台日誌<br>
-                    • 確認domestic_books.json檔案存在
+                    • 直接在瀏覽器中測試API端點<br>
+                    • 查看Vercel控制台日誌
                 `);
             }
         }
