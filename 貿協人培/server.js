@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');  // 加入此行以引入 CORS 模組
 const newsApiRoutes = require('./news-api/server');  // 引入 news-api 路由
 const courseApiRoutes = require('./course-api/server');  // 引入 course-api 路由
 const fileApiRoutes = require('./file-api/server');  // 引入 file-api 路由
