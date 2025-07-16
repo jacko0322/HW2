@@ -333,7 +333,25 @@
     <script>
         // 🆕 全局變數
         let booksList = []; // 儲存從API載入的書籍資料
-        let apiBaseUrl = 'http://localhost:3000/api'; // 只使用API，不使用靜態檔案
+        
+        // 🔧 API配置
+        function getApiUrl() {
+            // 🔗 localtunnel URL
+            const localtunnelUrl = 'https://afraid-years-jog.loca.lt'; // ✅ 您的實際localtunnel URL
+            
+            // 自動偵測環境
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                return 'http://localhost:3000/api'; // 本地開發
+            } else {
+                return localtunnelUrl + '/api'; // GitHub Pages使用localtunnel
+            }
+        }
+        
+        let apiBaseUrl = getApiUrl();
+        
+        // 🐞 Debug輸出
+        console.log('🌍 當前環境:', window.location.hostname);
+        console.log('🔗 使用API地址:', apiBaseUrl);
 
         // 🆕 從API載入書籍資料
         function loadBooks() {
