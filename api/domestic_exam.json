@@ -1,0 +1,93 @@
+{
+  "siteInfo": {
+    "title": "會展人才培育與認證",
+    "description": "培育我國會展產業從業人員之專業技能，建立會展產業認證制度及人才資料庫，逐步提昇人才素質，促使台灣會展人才資源適才適用。",
+    "keywords": "會展",
+    "originalUrl": "https://mice2.tako.life/meettaiwan/training/mice/exam/國內認證考試",
+    "extractedDate": "2025-07-16T06:46:18.274Z"
+  },
+  "navigation": [
+    {
+      "text": "首頁",
+      "url": "https://jacko0322.github.io/HW2/首頁.html"
+    },
+    {
+      "text": "最新消息",
+      "url": "https://jacko0322.github.io/HW2/最新消息.html"
+    }
+  ],
+  "examCards": [
+    {
+      "id": 1,
+      "title": "ckedotor",
+      "description": "內政部警政署165全民防騙網\n\n更新日期：2023-11-16\n\n全民防騙～165全民防騙網可以線上查詢詐騙資訊囉！\n\n歡迎參考【內政部警政署165全民反騙網】\n\n相關網址: https://165.npa.gov.tw/",
+      "tags": [],
+      "location": "asdf",
+      "examDate": "111年8月6日~9月3日 (每週六) 09:30-16:30",
+      "examTime": "上課時段描述",
+      "fee": "免費",
+      "registrationUrl": "https://mice2.tako.life/meettaiwan/training/mice/exam-signup/13",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/17149637083933.jpg"
+    },
+    {
+      "id": 2,
+      "title": "111年度會議展覽專業人員認證考試",
+      "description": "111年度「會議展覽專業人員認證考試簡章」已公告，請至金融研訓院網站查詢及報名。報名資格：高中(職)以上學校畢業或相當學力鑑定證明報名日期：111年8月8日(一) 10:00起至9月23日(五)17:00止測驗日期：111年10月23日(日) 試務行政受託辦理單位：金融研訓院測驗中心聯絡電話：(02)3365-3666按1服務時間：星期一至星期五9:00~17:30考試報名資訊請點我（外連至金融研訓院網站）",
+      "tags": [
+        "國內認證",
+        "國內證照"
+      ],
+      "location": "台北,台中,高雄",
+      "examDate": "111年10月23日(日)",
+      "examTime": "13:30-16:30",
+      "fee": "1000",
+      "registrationUrl": "https://google.com/",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/uploads/courses/111年度會議展覽專業人員認證考試.jpg"
+    }
+  ],
+  "certificationRenewal": {
+    "title": "會議展覽專業人員認證及格證書更新作業須知",
+    "lastUpdated": "113年2月24日",
+    "content": "會議展覽專業人員認證及格證書更新作業須知\n修訂日期：113年2月24日\n申請人：已取得「會議展覽專業人員認證及格證書」，尚未到期將屆期，需申請更新者。\n申請期間及方式：每年9月1日開始受理申請，至當年10月31日止，逾期恕不受理。\n申請方式：申請書及相關證明資料掃描成PDF檔案，以電子郵件申請。\n收件電子郵件：wenhuei@taitra.org.tw\n延長效期：申請人經審核通過後，「會議展覽專業人員認證及格證書」得延長效期5年。"
+  },
+  "tabs": [
+    {
+      "name": "國內認證考試",
+      "active": true
+    },
+    {
+      "name": "國內認證歷屆試題",
+      "active": false
+    },
+    {
+      "name": "國內認證更新",
+      "active": false
+    },
+    {
+      "name": "報名國內認證課程",
+      "active": false
+    }
+  ],
+  "footer": {
+    "email": "irenechen@taitra.org.tw",
+    "organizer": "經濟部國際貿易署　　承辦單位：財團法人中華民國對外貿易發展協會",
+    "consultationPhone": "(02)2725-5200分機1151",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/miceiti/",
+      "youtube": "https://www.youtube.com/channel/UCDlAeVi8iwdXoI5Hf6KULyw"
+    }
+  },
+  "extractionSummary": {
+    "totalExamCards": 2,
+    "dataTypes": [
+      "網站基本資訊",
+      "導航菜單",
+      "考試卡片",
+      "認證更新資訊",
+      "頁面標籤",
+      "聯絡資訊"
+    ],
+    "extractedDate": "2025-07-16",
+    "sourceFile": "paste.txt"
+  }
+}

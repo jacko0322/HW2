@@ -1,0 +1,301 @@
+{
+  "siteInfo": {
+    "title": "國內認證考試歷屆試題",
+    "description": "培育我國會展產業從業人員之專業技能，建立會展產業認證制度及人才資料庫，逐步提昇人才素質，促使台灣會展人才資源適才適用。",
+    "keywords": "會展",
+    "originalUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=全部",
+    "extractedDate": "2025-07-16T07:12:05.350Z"
+  },
+  "navigation": [
+    {
+      "text": "會展人培",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice",
+      "active": false
+    },
+    {
+      "text": "數位學習",
+      "url": "javascript:void(0);",
+      "active": false,
+      "dropdown": [
+        {
+          "text": "線上學堂",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/course"
+        },
+        {
+          "text": "英文e點通",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/englishCourse"
+        }
+      ]
+    },
+    {
+      "text": "認證學習",
+      "url": "javascript:void(0);",
+      "active": false,
+      "dropdown": [
+        {
+          "text": "試題測驗",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningEightType?type=all"
+        }
+      ]
+    },
+    {
+      "text": "學員專區",
+      "url": "javascript:void(0);",
+      "active": true,
+      "dropdown": [
+        {
+          "text": "課程上課記錄",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/learningRecord/memberCourse"
+        },
+        {
+          "text": "測驗記錄",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/learningRecord/memberExam"
+        },
+        {
+          "text": "課程筆記",
+          "url": "https://mice2.tako.life/meettaiwan/training/mice/home/learningRecord/memberNote"
+        }
+      ]
+    },
+    {
+      "text": "登出",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/logout",
+      "active": false
+    }
+  ],
+  "breadcrumb": [
+    {
+      "text": "首頁",
+      "active": false
+    },
+    {
+      "text": "認證學習",
+      "active": false
+    },
+    {
+      "text": "國內認證考試歷屆試題",
+      "active": true
+    }
+  ],
+  "pageTitle": "試題測驗",
+  "yearTabs": [
+    {
+      "text": "全部",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions",
+      "active": true
+    },
+    {
+      "text": "96",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=96",
+      "active": false
+    },
+    {
+      "text": "97",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=97",
+      "active": false
+    },
+    {
+      "text": "98",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=98",
+      "active": false
+    },
+    {
+      "text": "99",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=99",
+      "active": false
+    },
+    {
+      "text": "100",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=100",
+      "active": false
+    },
+    {
+      "text": "101",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=101",
+      "active": false
+    },
+    {
+      "text": "102",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=102",
+      "active": false
+    },
+    {
+      "text": "103",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=103",
+      "active": false
+    },
+    {
+      "text": "104",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=104",
+      "active": false
+    },
+    {
+      "text": "105",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=105",
+      "active": false
+    },
+    {
+      "text": "106",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=106",
+      "active": false
+    },
+    {
+      "text": "107",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=107",
+      "active": false
+    },
+    {
+      "text": "108",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=108",
+      "active": false
+    },
+    {
+      "text": "109",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=109",
+      "active": false
+    },
+    {
+      "text": "110",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=110",
+      "active": false
+    },
+    {
+      "text": "2022",
+      "url": "https://mice2.tako.life/meettaiwan/training/mice/home/examPastQuestions?year=2022",
+      "active": false
+    }
+  ],
+  "examCards": [
+    {
+      "id": 1,
+      "title": "國內認證考試歷屆試題隨機測驗",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/quizzesList",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_10.jpg",
+      "isRandom": true,
+      "year": "隨機",
+      "subject": "綜合"
+    },
+    {
+      "id": 2,
+      "title": "96年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/9",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "96",
+      "subject": "會展概論"
+    },
+    {
+      "id": 3,
+      "title": "97年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/10",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "97",
+      "subject": "會展概論"
+    },
+    {
+      "id": 4,
+      "title": "98年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/11",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "98",
+      "subject": "會展概論"
+    },
+    {
+      "id": 5,
+      "title": "99年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/12",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "99",
+      "subject": "會展概論"
+    },
+    {
+      "id": 6,
+      "title": "100年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/13",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "100",
+      "subject": "會展概論"
+    },
+    {
+      "id": 7,
+      "title": "101年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/14",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "101",
+      "subject": "會展概論"
+    },
+    {
+      "id": 8,
+      "title": "102年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/15",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "102",
+      "subject": "會展概論"
+    },
+    {
+      "id": 9,
+      "title": "103年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/16",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "103",
+      "subject": "會展概論"
+    },
+    {
+      "id": 10,
+      "title": "104年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/17",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "104",
+      "subject": "會展概論"
+    },
+    {
+      "id": 11,
+      "title": "105年會展概論",
+      "testUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/certifiedLearningOldExam/18",
+      "imageUrl": "https://mice2.tako.life/meettaiwan/training/mice/home/images/question_01.jpg",
+      "isRandom": false,
+      "year": "105",
+      "subject": "會展概論"
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "totalPages": 4,
+    "hasNext": true,
+    "hasPrev": false,
+    "itemsPerPage": 10
+  },
+  "footer": {
+    "email": "irenechen@taitra.org.tw",
+    "phone": "(02)2725-5200 分機 3537",
+    "organizer": "經濟部國際貿易署、中華民國對外貿易發展協會",
+    "copyright": "Copyright © 2023 經濟部國際貿易署 版權所有",
+    "privacyPolicy": "個人資訊隱私權保護聲明",
+    "securityPolicy": "網路使用安全相關保護聲明"
+  },
+  "extractionSummary": {
+    "totalExamCards": 11,
+    "totalYearTabs": 17,
+    "yearRange": "96-2022",
+    "hasRandomTest": true,
+    "dataTypes": [
+      "網站基本資訊",
+      "導航菜單",
+      "麵包屑導航",
+      "年份標籤",
+      "考試卡片",
+      "分頁資訊",
+      "頁腳資訊"
+    ],
+    "extractedDate": "2025-07-16",
+    "sourceFile": "paste.txt"
+  }
+}
